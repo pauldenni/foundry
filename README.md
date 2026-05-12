@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/foundry.png" alt="Foundry" />
+</p>
+
 # Foundry
 
 **A suite of AI-powered tools for building and stress-testing ideas, products, and decisions.**
