@@ -52,31 +52,59 @@ A personal challenge network of six AI advisors — The Strategist, The Devil's 
 
 ## Setup
 
-### 1. Clone the repo
+Foundry is designed to be **dropped into any project** (a code repo, an Obsidian vault, anywhere you use Claude Code) and activated with slash commands. The foundry folder is the toolkit — your project is where the work happens.
+
+### Drop-in install (recommended)
+
+1. **Drop the `foundry/` folder at the root of your project.**
+
+   Your project should now look like:
+   ```
+   your-project/
+   ├── .claude/          (existing or new)
+   ├── foundry/          (just dropped in)
+   └── ...
+   ```
+
+2. **From your project root, run the install script once:**
+
+   ```bash
+   ./foundry/install.sh
+   ```
+
+   This symlinks four slash commands into `.claude/commands/`. Existing commands in that folder are left alone. Re-running is safe — it reports what's already installed.
+
+3. **Launch Claude Code from your project root and use:**
+
+   ```
+   /foundry   show the welcome and choose a tool
+   /anvil     jump straight to Anvil
+   /forge     jump straight to Forge
+   /switch    swap tools mid-session
+   ```
+
+Forge writes code into your project's actual structure — the foundry folder only holds the personas, rules, and pipeline logic. Anvil leaves no files behind; it's pure conversation.
+
+### Standalone install
+
+If you just want to try Foundry on its own without dropping it into another project, clone the repo and start Claude Code from inside it:
 
 ```bash
 git clone https://github.com/[your-username]/foundry.git
 cd foundry
-```
-
-### 2. Choose your tool
-
-Start Claude Code from the Foundry root:
-
-```bash
 claude
 ```
 
-Foundry will present both tools and ask which to activate. Or navigate directly into a tool's directory to start it without the prompt:
+The root `CLAUDE.md` auto-loads and presents the welcome screen. You can also cd directly into a tool:
 
 ```bash
-cd forge && claude    # start Forge directly
-cd anvil && claude    # start Anvil directly
+cd foundry/forge && claude    # Forge directly
+cd foundry/anvil && claude    # Anvil directly
 ```
 
-### 3. Set up Forge for your project
+### Forge project setup
 
-Forge requires one file filled in before your first session: `forge/.claude/rules/project-context.md`. Every persona reads this file first. Fill in your actual stack, conventions, and constraints.
+Before your first Forge session, fill in `foundry/forge/.claude/rules/project-context.md` (or `forge/.claude/rules/project-context.md` in standalone mode). Every persona reads it first.
 
 Anvil requires no project-specific setup — start a session and go.
 
@@ -87,9 +115,15 @@ Anvil requires no project-specific setup — start a session and go.
 ```
 foundry/
 ├── README.md                          ← you are here
-├── CLAUDE.md                          ← Foundry entry point (loads on claude from root)
+├── CLAUDE.md                          ← standalone entry point (auto-loads when cwd is foundry/)
 ├── CONTRIBUTING.md
 ├── LICENSE
+├── install.sh                         ← run from a parent project to register slash commands
+├── commands/                          ← slash command bodies (symlinked into parent's .claude/commands/)
+│   ├── foundry.md                     ← /foundry  — welcome + route
+│   ├── anvil.md                       ← /anvil    — jump to Anvil
+│   ├── forge.md                       ← /forge    — jump to Forge
+│   └── switch.md                      ← /switch   — swap tools mid-session
 │
 ├── forge/
 │   ├── README.md
