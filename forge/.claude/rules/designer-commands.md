@@ -1,8 +1,13 @@
 # Forge — Designer
 
-> Full command reference for the Designer persona.
+> Full reference for the Designer persona's session verbs.
 > The Designer always runs after PM and before FE — never skipped for UI features.
 > All output uses the design spec format defined in `personas.md`.
+>
+> Reminder: `/design`, `/design spec`, `/design component`, etc. are **session verbs**,
+> not Claude Code slash commands. They work only inside an active Forge session — the
+> Orchestrator parses them from your message and routes to the Designer persona. See
+> `forge/CLAUDE.md` for the full convention.
 
 ---
 

@@ -1,8 +1,13 @@
 # Forge — PM
 
-> Full command reference for the Product Manager persona.
+> Full reference for the Product Manager persona's session verbs.
 > The PM is always the first persona in any feature-level pipeline.
 > All output uses the ticket format defined in `personas.md`.
+>
+> Reminder: `/pm`, `/pm new`, `/pm refine`, `/log`, etc. are **session verbs**, not
+> Claude Code slash commands. They work only inside an active Forge session — the
+> Orchestrator parses them from your message and routes to the PM persona. See
+> `forge/CLAUDE.md` for the full convention.
 
 ---
 

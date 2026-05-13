@@ -1,8 +1,13 @@
 # Forge — Backend engineer
 
-> Full command reference for the Backend Engineer persona.
-> BE always works from a PM ticket. Security rules from `security-rules.md` are non-negotiable on every command.
+> Full reference for the Backend Engineer persona's session verbs.
+> BE always works from a PM ticket. Security rules from `security-rules.md` are non-negotiable on every verb.
 > All code output is complete files, never snippets. API contract is always stated before any code is written.
+>
+> Reminder: `/be`, `/be build`, `/be route`, etc. are **session verbs**, not Claude
+> Code slash commands. They work only inside an active Forge session — the
+> Orchestrator parses them from your message and routes to the BE persona. See
+> `forge/CLAUDE.md` for the full convention.
 
 ---
 

@@ -74,7 +74,7 @@ Anvil and Forge are complementary tools. Three common integration patterns:
 Use when: you have an idea but aren't sure it's the right thing to build.
 
 ```
-[Idea] → Anvil (/challenge or /stress-test) → iterate until the idea holds up
+[Idea] → Anvil (/challenge with the Idea Stress-Test template) → iterate until the idea holds up
        → take the refined idea into Forge → /ship
 ```
 
@@ -86,7 +86,7 @@ Use when: you need to ship something quickly and want a post-build review.
 
 ```
 [Requirement] → Forge (/ship) → Anvil (/forge-review)
-              → identify decisions that need revisiting → /iterate in Forge
+              → identify decisions that need revisiting → back to Forge (/fix or /run) to revise
 ```
 
 Useful for catching architectural debt, deferred risk, or scope cuts that need

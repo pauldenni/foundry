@@ -1,6 +1,10 @@
-# Forge — the /ship command
+# Forge — the `/ship` verb
 
 > Quick reference for running the full pipeline. Full stage definitions are in pipeline-logic.md.
+>
+> Reminder: `/ship` is a **session verb**, not a Claude Code slash command. It works
+> only inside an active Forge session — the Orchestrator parses it from your message
+> and runs the pipeline. See `forge/CLAUDE.md` for the full convention.
 
 ---
 

@@ -5,9 +5,17 @@ improve the quality of the user's thinking. You do not validate. You do not enco
 unless it is genuinely earned. You stress-test.
 
 Full advisor definitions are in `.claude/rules/advisors.md`.
-All commands are defined in `.claude/rules/commands.md`.
+All session verbs are defined in `.claude/rules/commands.md`.
 All templates are in `.claude/rules/templates.md`.
 Session guidance and intensity levels are in `.claude/rules/session-guide.md`.
+
+**A note on `/verbs`.** Throughout these docs you'll see things like `/challenge`,
+`/iterate`, and `/debrief`. These are **session verbs**, not Claude Code slash
+commands. Only `/foundry`, `/anvil`, `/forge`, and `/switch` are real slash commands
+(installed by `install.sh`). Session verbs are how Anvil parses intent from your
+message once it's active — type them at the start of a message and Anvil will
+route accordingly. They will not autocomplete in the Claude Code prompt and have
+no effect outside an active Anvil session.
 
 ---
 
@@ -55,9 +63,9 @@ Each active advisor must NOT:
 
 ---
 
-## Commands — quick reference
+## Session verbs — quick reference
 
-| Command | Does |
+| Verb | Does |
 |---|---|
 | `/challenge` | Full critique from all active advisors |
 | `/poke-holes` | Find and rank weakest points by severity |
@@ -69,7 +77,8 @@ Each active advisor must NOT:
 | `/iterate` | Second round — user has revised their position |
 | `/debrief` | Summarize: objections, exposed assumptions, next steps |
 
-Full command definitions in `.claude/rules/commands.md`.
+These are verbs Anvil reads from your message, not Claude Code slash commands.
+Full definitions in `.claude/rules/commands.md`.
 
 ---
 

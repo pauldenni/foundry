@@ -3,6 +3,11 @@
 Five structured templates for common session types. Each is designed to give advisors
 enough context to produce a meaningful, targeted challenge rather than a generic one.
 
+The opening line of each template is a **session verb** (e.g. `/challenge`,
+`/pre-mortem`). These are not Claude Code slash commands — they're how Anvil reads
+intent from your message. Type the verb at the start of the submission, then fill
+in the body. See `commands.md` for the full list of verbs.
+
 The rule: garbage in, garbage out. Vague submissions produce vague challenges. The
 more specific the input — real constraints, actual numbers, honest failure guesses —
 the sharper the output.
@@ -14,7 +19,9 @@ the sharper the output.
 Use when: choosing between defined options and needing the reasoning pressure-tested.
 
 ```
-/challenge DECISION AUDIT
+/challenge
+
+Type: Decision audit
 
 Context: [Describe the decision and its background in 3–5 sentences]
 
@@ -46,7 +53,9 @@ assumption in my reasoning most likely to be wrong.
 Use when: you believe in an idea and want to find where it breaks before committing.
 
 ```
-/challenge IDEA STRESS-TEST
+/challenge
+
+Type: Idea stress-test
 
 Idea: [Describe in 2–4 sentences — be specific, not aspirational]
 
@@ -78,7 +87,7 @@ by how dangerous they are if wrong.
 Use when: about to commit to something significant and irreversible.
 
 ```
-/pre-mortem PRE-MORTEM ANALYSIS
+/pre-mortem
 
 Decision/plan: [What you're about to do — be specific]
 
@@ -107,7 +116,7 @@ Run a pre-mortem. Each advisor answers independently:
 Use when: you have a complex plan and want to expose which beliefs are doing the most structural work.
 
 ```
-/assumption-map ASSUMPTION MAPPING
+/assumption-map
 
 Decision/plan: [Describe it in 3–5 sentences]
 
@@ -136,7 +145,7 @@ would I test or falsify it before committing further?
 Use when: completing a Forge session and wanting to challenge the decisions made during the build.
 
 ```
-/forge-review FORGE SESSION REVIEW
+/forge-review
 
 What was built: [Brief description — feature name, scope, what it does]
 

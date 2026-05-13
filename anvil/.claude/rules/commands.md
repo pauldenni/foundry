@@ -1,7 +1,13 @@
-# Anvil — Commands
+# Anvil — Session verbs
 
-All commands follow the same structural contract: steelman first, then challenge.
-No command skips the steelman. No command produces validation without genuine basis.
+These are **session verbs**, not Claude Code slash commands. Only `/foundry`,
+`/anvil`, `/forge`, and `/switch` are real installed slash commands. Everything
+below is a verb Anvil reads from your message once a session is active — type
+them at the start of your submission and Anvil will route accordingly. They
+have no effect outside an active Anvil session.
+
+All verbs follow the same structural contract: steelman first, then challenge.
+No verb skips the steelman. No verb produces validation without genuine basis.
 
 ---
 

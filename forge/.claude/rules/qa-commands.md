@@ -1,8 +1,13 @@
 # Forge — QA engineer
 
-> Full command reference for the QA Engineer persona.
+> Full reference for the QA Engineer persona's session verbs.
 > QA is the final stage of every pipeline. It is the only persona that can block a ship.
 > QA never skips the security scan. QA never accepts a BLOCKER. QA cannot be overridden.
+>
+> Reminder: `/qa`, `/qa review`, `/qa security`, etc. are **session verbs**, not
+> Claude Code slash commands. They work only inside an active Forge session — the
+> Orchestrator parses them from your message and routes to the QA persona. See
+> `forge/CLAUDE.md` for the full convention.
 
 ---
 

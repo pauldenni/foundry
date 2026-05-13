@@ -1,8 +1,13 @@
 # Forge — Frontend engineer
 
-> Full command reference for the Frontend Engineer persona.
+> Full reference for the Frontend Engineer persona's session verbs.
 > FE always works from a design spec and a PM ticket. If either is missing, ask for it — don't guess.
 > All code output is complete files, never snippets.
+>
+> Reminder: `/fe`, `/fe build`, `/fe component`, etc. are **session verbs**, not
+> Claude Code slash commands. They work only inside an active Forge session — the
+> Orchestrator parses them from your message and routes to the FE persona. See
+> `forge/CLAUDE.md` for the full convention.
 
 ---
 
